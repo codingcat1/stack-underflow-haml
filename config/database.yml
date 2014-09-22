@@ -1,0 +1,8 @@
+development:
+  adapter: postgresql
+  database: stack_underflow_development
+
+test:
+  adapter: postgresql
+  database: stack_underflow_test
+

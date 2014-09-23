@@ -14,7 +14,7 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.create(question_params)
     respond_to do |format|
-      format.html { redirect_to root_url, notice: "Your question has been added!" }
+      format.html { redirect_to root_url }
       format.js
     # else
     #   render 'create', alert: "Please enter a valid question."

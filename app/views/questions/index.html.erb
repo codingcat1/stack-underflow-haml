@@ -1,13 +1,14 @@
 <% content_for(:title, "Stack Underflow") %>
 
-<h1>Stack Underflow</h3>
+<h1 class="text-center">Stack Underflow</h3>
 
 <div class="list-group">
   <% @questions.each do |question| %>
-    <%= link_to question.description, question_path(question), :class => "list-group-item"%>
+    <%= link_to question.description, question_path(question), :class => "list-group-item" %> by <%= "#{question.user.user_name}" %>
   <% end %>
 </div>
+<div class="list-group">
 <% if current_user %>
   <%= link_to "Add a New Question", new_question_path, :class => "btn btn-success btn-lg", id: "add_q", remote: true %>
 <% end %>
-
+</div>

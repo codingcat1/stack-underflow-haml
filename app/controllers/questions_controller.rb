@@ -4,9 +4,26 @@ class QuestionsController < ApplicationController
 
   def index
     @questions = Question.all
+    @users = User.all
   end
 
   def new
     @question = Question.new
+  end
+
+  def create
+    @question = Question.create(question_params)
+    respond_to do |format|
+      format.html { redirect_to root_url, notice: "Your question has been added!" }
+      format.js
+    # else
+    #   render 'create', alert: "Please enter a valid question."
+    end
+  end
+
+  private
+
+  def question_params
+    params.require(:question).permit(:description).merge(user_id: current_user.id)
   end
 end

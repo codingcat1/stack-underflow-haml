@@ -4,7 +4,7 @@
 
 <div class="list-group">
   <% @questions.each do |question| %>
-    <%= link_to question.description, question_path(question), :class => "list-group-item" %> by <%= "#{question.user.user_name}" %>
+    <p class="list-group-item"><%= link_to question.description, question_path(question) %> by <%= "#{question.user.user_name}" %></p>
   <% end %>
 </div>
 <div class="list-group">

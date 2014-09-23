@@ -1,5 +1,5 @@
 <div class="list-group">
-  <%= link_to question.description, question_path(question), :class => "list-group-item"%>
+  <p class="list-group-item"><%= link_to question.description, question_path(question) %> by <%= "#{question.user.user_name}" %></p>
 </div>
 
 

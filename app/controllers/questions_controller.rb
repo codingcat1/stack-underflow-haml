@@ -21,6 +21,10 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def show
+    @question = Question.find(params[:id])
+  end
+
   def destroy
     @question = Question.destroy(params[:id])
     respond_to do |format|

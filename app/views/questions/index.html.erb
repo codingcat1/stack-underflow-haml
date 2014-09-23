@@ -2,7 +2,7 @@
 
 <h1 class="text-center">Stack Underflow</h3>
 
-<div class="list-group">
+<div class="list-group" id="questions">
   <% @questions.each do |question| %>
     <p class="list-group-item" id="question_<%= question.id %>">
     <%= link_to question.description, question_path(question) %> by

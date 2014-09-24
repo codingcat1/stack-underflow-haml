@@ -6,12 +6,14 @@
 <pre><p id="description"> <%= @question.description %> </p></pre>
 
 
-<div class="list-group" id="answers">
+<div id="answers">
   <% @question.answers.each do |answer| %>
-    <p class="list-group-item" id="answer_<%= answer.id %>">
-    <%= "#{answer.description}" %> answered by
-    <%= "#{answer.user.user_name}" %></p>
+    <blockquote><font size="2">
+      <p id="answer_<%= answer.id %>"><%= "#{answer.description}" %></p></font>
+      <footer> answered by <strong><%= "#{answer.user.user_name}" %></strong></footer>
+    </blockquote>
   <% end %>
+
 </div>
 
 

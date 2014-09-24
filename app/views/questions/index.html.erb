@@ -2,6 +2,13 @@
 
 <h1 class="text-center">Stack Underflow</h3>
 
+<div class="list-group">
+  <% if current_user %>
+    <%= link_to "Add a New Question", new_question_path, :class => "btn btn-success btn-lg", id: "add_q", remote: true %>
+  <% end %>
+</div>
+
+
 <div class="list-group" id="questions">
   <% @questions.each do |question| %>
     <p class="list-group-item" id="question_<%= question.id %>">
@@ -10,8 +17,4 @@
     <%= link_to "(remove)", question, method: :delete, data: {confirm: "Are you sure?"}, id: "remove_q", remote: true %> </p>
   <% end %>
 </div>
-<div class="list-group">
-  <% if current_user %>
-    <%= link_to "Add a New Question", new_question_path, :class => "btn btn-success btn-lg", id: "add_q", remote: true %>
-  <% end %>
-</div>
+

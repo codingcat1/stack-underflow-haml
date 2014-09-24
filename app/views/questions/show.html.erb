@@ -15,7 +15,7 @@
 
 
 <div id="answers">
-  <% @question.answers.each do |answer| %>
+  <% @question.answers.reverse_each do |answer| %>
     <blockquote><font size="2">
       <p id="answer_<%= answer.id %>"><%= "#{answer.description}" %></p></font>
       <footer> answered by <strong><%= "#{answer.user.user_name}" %></strong></footer>

@@ -1,6 +1,6 @@
-class Question < ActiveRecord::Base
+class Answer < ActiveRecord::Base
   validates :description, :presence => true
 
   belongs_to :user
-  has_many :answers
+  belongs_to :question
 end

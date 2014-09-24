@@ -3,7 +3,14 @@
 
 <h1 class="text-center">Stack Underflow</h3>
 
-<!-- <input class="form-control" id="disabledInput" type="text" placeholder= "#{question.description}" disabled> -->
 <pre><p> <%= @question.description %> </p></pre>
 
-<%= link_to "Back to Stack Underflow Questions", question_path(question) %>
+
+
+<div class="list-group">
+  <% if current_user %>
+    <%= link_to "Reply", new_question_path, :class => "btn btn-success btn-lg", id: "reply_to_q", remote: true %>
+  <% end %>
+</div>
+
+<%= link_to "Back to Stack Underflow Questions", questions_path %>

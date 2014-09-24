@@ -11,7 +11,7 @@
   <% end %>
 </div>
 <div class="list-group">
-<% if current_user %>
-  <%= link_to "Add a New Question", new_question_path, :class => "btn btn-success btn-lg", id: "add_q", remote: true %>
-<% end %>
+  <% if current_user %>
+    <%= link_to "Add a New Question", new_question_path, :class => "btn btn-success btn-lg", id: "add_q", remote: true %>
+  <% end %>
 </div>

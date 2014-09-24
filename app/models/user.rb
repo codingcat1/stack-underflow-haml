@@ -4,4 +4,5 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :user_name
 
   has_many :questions
+  has_many :answers
 end

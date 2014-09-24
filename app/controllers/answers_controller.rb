@@ -20,6 +20,14 @@ class AnswersController < ApplicationController
     end
   end
 
+  def destroy
+    @answer = Answer.destroy(params[:id])
+    respond_to do |format|
+      format.html { redirect_to question_path(@question) }
+      format.js
+    end
+  end
+
   private
 
   def answer_params

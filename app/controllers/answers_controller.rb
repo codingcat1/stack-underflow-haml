@@ -8,9 +8,11 @@ class AnswersController < ApplicationController
 
   def new
     @answer = Answer.new
+    @question = Question.find_by_id(params[:question_id])
   end
 
   def create
+    @question = Question.find_by_id(params[:question_id])
     @answer = Answer.create(answer_params)
     respond_to do |format|
       format.html { redirect_to root_url }
@@ -21,6 +23,6 @@ class AnswersController < ApplicationController
   private
 
   def answer_params
-    params.require(:question).permit(:description).merge(user_id: current_user.id)
+    params.require(:answer).permit(:description).merge(question_id: @question.id, user_id: current_user.id)
   end
 end

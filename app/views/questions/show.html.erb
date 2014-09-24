@@ -1,6 +1,9 @@
 <% content_for(:title, "Stack Underflow") %>
 
 
-<!--<h1 class="text-center">Stack Underflow</h3>
+<h1 class="text-center">Stack Underflow</h3>
 
-<input class="form-control" id="disabledInput" type="text" placeholder= "#{question.description}" disabled>-->
+<!-- <input class="form-control" id="disabledInput" type="text" placeholder= "#{question.description}" disabled> -->
+<pre><p> <%= @question.description %> </p></pre>
+
+<%= link_to "Back to Stack Underflow Questions", question_path(question) %>

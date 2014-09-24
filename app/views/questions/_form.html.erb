@@ -1,5 +1,5 @@
 <%= form_for @question, remote: true do |f| %>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-    <%= f.submit(:class => "btn btn-primary") %>
+  <%= f.label :description %>
+ <textarea class="form-control" rows="3" id="question_description" name="question[description]" type="text"></textarea>
+  <%= f.submit(:class => "btn btn-primary") %>
 <% end %>

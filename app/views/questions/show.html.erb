@@ -2,8 +2,16 @@
 
 
 <h1 class="text-center">Stack Underflow</h3>
+<p class="text-center"> <%= link_to "Back to Stack Underflow Questions", questions_path %></p>
 
 <pre><p id="description"> <%= @question.description %> </p></pre>
+
+
+<div class="list-group">
+  <% if current_user %>
+    <%= link_to "Reply", new_question_answer_path(@question), :class => "btn btn-success btn-lg", id: "reply_to_q", remote: true %>
+  <% end %>
+</div>
 
 
 <div id="answers">
@@ -18,10 +26,5 @@
 
 
 
-<div class="list-group">
-  <% if current_user %>
-    <%= link_to "Reply", new_question_answer_path(@question), :class => "btn btn-success btn-lg", id: "reply_to_q", remote: true %>
-  <% end %>
-</div>
 
-<%= link_to "Back to Stack Underflow Questions", questions_path %>
+<br>

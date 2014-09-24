@@ -2,5 +2,5 @@ $('#new_answer').remove();
 $('#notice').empty();
 $('#notice').show().append('<%= j "Your answer has been added!" %>');
 $('#description').show();
-$('#answers').show().append('<%= j render(@answer) %>');
+$('#answers').show().prepend('<%= j render(@answer) %>');
 $('#reply_to_q').show();

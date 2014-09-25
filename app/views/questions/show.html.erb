@@ -4,7 +4,9 @@
 <h1 class="text-center">Stack Underflow</h3>
 <p class="text-center"> <%= link_to "Back to Stack Underflow Questions", questions_path %></p>
 
-<pre><p id="description"> <%= @question.description %>
+<pre><p id="description">
+  <strong>Topic: <%= @question.topic %>
+  Question: </strong><%= @question.description %>
   <br>
   BY <%= @question.user.user_name %> @ <%= @question.created_at.strftime("%d %b. %Y, %H:%M") %></p>
 </pre>

@@ -12,7 +12,7 @@
 <div class="list-group" id="questions">
   <% @questions.reverse_each do |question| %>
     <p class="list-group-item" id="question_<%= question.id %>">
-    <%= link_to question.description, question_path(question) %> by
+    <%= link_to question.topic, question_path(question) %> by
     <%= "#{question.user.user_name}" %> at <%= "#{question.created_at.strftime("%d %b. %Y, %I:%M%p")}" %>
     <%= link_to "(remove)", question, method: :delete, data: {confirm: "Are you sure?"}, id: "remove_q", remote: true %> </p>
   <% end %>

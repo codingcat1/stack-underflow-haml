@@ -1,5 +1,7 @@
 class AnswersController < ApplicationController
 
+  before_filter :authorize, only: [:new, :create, :destroy, :edit, :update]
+
 
   def index
     @answers = Answers.all

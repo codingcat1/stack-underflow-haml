@@ -1,5 +1,5 @@
-<blockquote><font size="2">
-  <p id="answer_<%= answer.id %>"> <%= "#{answer.description}" %></p></font>
+<blockquote id="answer_<%= answer.id %>">
+  <font size="2"><%= "#{answer.description}" %></font>
   <footer> answered by <strong><%= "#{answer.user.user_name}" %></strong></footer>
-  <%= link_to "(remove)", question_answer_path(@question, answer), method: :delete, data: {confirm: "Are you sure?"}, id: "remove_a", remote: true %>
+  <font size="1"><%= link_to "(remove)", question_answer_path(@question, answer), method: :delete, data: {confirm: "Are you sure?"}, id: "remove_a", remote: true %></font>
 </blockquote>

@@ -41,3 +41,4 @@ class QuestionsController < ApplicationController
     params.require(:question).permit(:description).merge(user_id: current_user.id)
   end
 end
+

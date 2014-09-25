@@ -1,12 +1,19 @@
 <% content_for(:title, "Stack Underflow") %>
 
-<h1 class="text-center">Stack Underflow</h3>
+<h1 class="text-center"><%= link_to "Stack Underflow", questions_path %></h3>
 
 <div class="list-group">
   <% if current_user %>
     <%= link_to "Add a New Question", new_question_path, :class => "btn btn-success btn-lg", id: "add_q", remote: true %>
   <% end %>
 </div>
+
+<%= form_tag questions_path, method: :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", name: nil %>
+  </p>
+<% end %>
 
 
 <h4>Topic of Discussion:</h4>

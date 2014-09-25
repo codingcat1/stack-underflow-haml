@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'bcrypt-ruby'
+gem 'textacular'
 
 group :development do
   gem 'better_errors'

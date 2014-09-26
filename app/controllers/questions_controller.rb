@@ -5,10 +5,8 @@ class QuestionsController < ApplicationController
   def index
     @questions = Question.all
     @users = User.all
-    if params[:search]
+    if params[:search].blank? == false
       @questions = Question.basic_search(params[:search])
-    else
-      @questions = Question.all
     end
   end
 

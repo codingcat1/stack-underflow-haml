@@ -8,6 +8,10 @@ class QuestionsController < ApplicationController
     if params[:search].blank? == false
       @questions = Question.basic_search(params[:search])
     end
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def new

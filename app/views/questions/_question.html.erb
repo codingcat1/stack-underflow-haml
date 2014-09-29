@@ -1,5 +1,0 @@
-<p class="list-group-item" id="question_<%= question.id %>">
-<%= link_to question.topic, question_path(question) %> by
-<%= "#{question.user.user_name}" %> at <%= "#{question.created_at.localtime.strftime("%d %b. %Y, %I:%M%p")}" %>
-<%= link_to "(remove)", question, method: :delete, data: {confirm: "Are you sure?"}, id: "remove_q", remote: true %> </p>
-

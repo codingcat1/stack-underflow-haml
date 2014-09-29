@@ -16,7 +16,7 @@
       - else
         = link_to "Sign Up", signup_path
         or
-        \#{link_to "Log In", login_path}
+        = link_to "Log In", login_path
     %p#notice.bg-success= flash[:notice]
     %p#alert.bg-danger= flash[:alert]
     = yield

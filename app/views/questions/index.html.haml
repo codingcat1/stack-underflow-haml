@@ -1,0 +1,20 @@
+- content_for(:title, "Stack Underflow")
+%h1.text-center
+  = link_to "Stack Underflow", questions_path
+
+.list-group
+  - if current_user
+    = link_to "Add a New Question", new_question_path, :class => "btn btn-success btn-lg", id: "add_q", remote: true
+
+= form_tag questions_path, method: :get, remote: true do
+  %p
+    = text_field_tag :search, params[:search]
+    = submit_tag "Search", name: nil
+
+%h4 Topic of Discussion:
+#questions.list-group
+  - @questions.reverse_each do |question|
+    %p.list-group-item{:id => "question_#{question.id}"}
+      = link_to question.topic, question_path(question)
+      by
+      \#{"#{question.user.user_name}"} at #{"#{question.created_at.localtime.strftime("%d %b. %Y, %I:%M%p")}"}#{link_to "(remove)", question, method: :delete, data: {confirm: "Are you sure?"}, id: "remove_q", remote: true}

@@ -11,6 +11,7 @@ gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'bcrypt-ruby'
 gem 'textacular'
+gem 'haml-rails'
 
 group :development do
   gem 'better_errors'

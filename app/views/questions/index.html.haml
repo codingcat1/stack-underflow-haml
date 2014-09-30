@@ -1,6 +1,6 @@
 - content_for(:title, "Stack Underflow")
-%h1.text-center
-  = link_to "Stack Underflow", questions_path, remote: true
+/ %h1.text-center
+/   = link_to "Stack Underflow", questions_path, remote: true
 
 .list-group
   - if current_user
@@ -17,4 +17,4 @@
     %p.list-group-item{:id => "question_#{question.id}"}
       = link_to question.topic, question_path(question)
       by
-      \#{"#{question.user.user_name}"} at #{"#{question.created_at.localtime.strftime("%d %b. %Y, %I:%M%p")}"}#{link_to "(remove)", question, method: :delete, data: {confirm: "Are you sure?"}, id: "remove_q", remote: true}
+      \#{"#{question.user.user_name}"} at #{"#{question.created_at.localtime.strftime("%d %b. %Y, %I:%M%p")}"} #{link_to "(remove)", question, method: :delete, data: {confirm: "Are you sure?"}, id: "remove_q", remote: true}

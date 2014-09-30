@@ -1,5 +1,5 @@
 $('#new_question').remove();
 $('#notice').empty();
 $('#notice').show().append('<%= j "Your question has been added!" %>');
-$('#questions').show.prepend('<%= j render(@question) %>');
+$('#questions').show().prepend('<%= j render(@question) %>');
 $('#add_q').show();

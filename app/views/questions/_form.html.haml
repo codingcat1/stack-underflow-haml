@@ -1,0 +1,6 @@
+= form_for @question, remote: true do |f|
+  = f.label :topic
+  %textarea#question_topic.form-control{rows:"1", name:"question[topic]", type:"text"}
+  = f.label :description
+  %textarea#question_description.form-control{rows:"3", name:"question[description]", type:"text"}
+  = f.submit(:class => "btn btn-primary")

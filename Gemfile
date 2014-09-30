@@ -12,6 +12,7 @@ gem 'autoprefixer-rails'
 gem 'bcrypt-ruby'
 gem 'textacular'
 gem 'haml-rails'
+# gem 'jquery-turbolinks'
 
 group :development do
   gem 'better_errors'

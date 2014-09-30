@@ -1,6 +1,6 @@
 - content_for(:title, "Stack Underflow")
 %h1.text-center
-  = link_to "Stack Underflow", questions_path
+  = link_to "Stack Underflow", questions_path, remote: true
 
 .list-group
   - if current_user

@@ -11,6 +11,8 @@
     = text_field_tag :search, params[:search]
     = submit_tag "Search", name: nil
 
+= link_to "Tumblr Blogs", blogs_path, class: "btn btn-warning"
+
 %h4 Topic of Discussion:
 #questions.list-group
   - @questions.reverse_each do |question|

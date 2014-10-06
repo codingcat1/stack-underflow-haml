@@ -13,6 +13,9 @@ gem 'bcrypt-ruby'
 gem 'textacular'
 gem 'haml-rails'
 # gem 'jquery-turbolinks'
+gem 'tumblr-api'
+gem 'tumblr_client'
+gem 'paperclip'
 
 group :development do
   gem 'better_errors'
@@ -22,6 +25,7 @@ end
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'dotenv-rails'
   gem 'pry'
 end
 

@@ -8,9 +8,9 @@ class Blog
     @type = params["type"]
     @images = params["photos"] if params["photos"]
     @caption = params["caption"]
-    @answer = answer_params
+    # @answer = answer_params
     # binding.pry
-    @video = params["player"].first['embed_code'] if params["player"]
+    # @video = params["player"].first['embed_code'] if params["player"]
   end
 
   def self.all
